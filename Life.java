@@ -39,7 +39,7 @@ public class Life {
 		}
 		return false;
 	}
-	public void update(){
+	public void nextGeneration(){
 		String newMatrix[][] = new String[dX][dY];
 		for(int row = 0; row < grid.length; row++) {
 			for(int col = 0; col < grid[row].length; col++) {
@@ -115,9 +115,13 @@ public class Life {
 		}
 		System.out.println("------------");
 		grid = newMatrix;
+		print();
 	}
 	public void print() {
 		System.out.print(toString());
+	}
+	public void println(String str) {
+		System.out.print("\n" + str + "\n");
 	}
 	public String toString() {
 		String msg = "";
